@@ -1,5 +1,11 @@
 //@ts-nocheck
-import { SHOWPRODUCTS,CHOOSEPRUDUCTS ,DELETEONE,DELETE} from "./type";
+import {
+  SHOWPRODUCTS,
+  CHOOSEPRUDUCTS,
+  DELETEONE,
+  DELETE,
+  BUYPRODUCT,
+} from "./type";
 const data = require("./products.json");
 
 export const Product = (state = data, action: { type: any; payload: any }) => {
@@ -34,7 +40,10 @@ export const MakeLists = (
       );
 
       const newState = [...middleList, action.payload];
-
+      if (newState.length > 10) {
+        alert("you can not add any items");
+        return middleList;
+      }
       return Object.values(
         newState?.reduce((acc, item) => {
           acc[item.productName] = acc[item.productName]
@@ -58,6 +67,18 @@ export const MakeLists = (
     case DELETE:
       return (state = []);
 
+    default:
+      return state;
+  }
+};
+export const finalShop = (
+  state = data,
+  action: { type: any; payload: any }
+) => {
+  switch (action.type) {
+    case BUYPRODUCT:
+      console.log("state>>>>>", action);
+      return [action.payload];
     default:
       return state;
   }

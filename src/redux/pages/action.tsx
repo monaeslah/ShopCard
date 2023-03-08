@@ -1,4 +1,4 @@
-import { CHOOSEPRUDUCTS ,DELETEONE,DELETE} from "./type";
+import { CHOOSEPRUDUCTS ,DELETEONE,DELETE,BUYPRODUCT} from "./type";
 export const makeListAction = (
   {
     id,
@@ -27,6 +27,19 @@ export const makeListAction = (
     Amount,
     totalCost,
   },
+});
+export const buylistAction = (payload: {
+  finalBill: {
+    id: string;
+    productName: string;
+    maxAmount: number;
+    taxRate: number;
+    price: number;
+  };
+}) => ({
+  type: BUYPRODUCT,
+
+  payload,
 });
 export const deletOneAction = (id: string) => ({
   type: DELETEONE,
