@@ -18,7 +18,9 @@
       margin: 1em 0;
       border: 1px solid $colorBlack;
       box-shadow: 0 8px 8px -4px $GrayShadow;
-    
+      span {
+        margin: 0.5em;
+      }
       .product_number {
         text-align: center;
         width: 1em;
@@ -26,10 +28,41 @@
         border: 1px solid $colorBlack;
         border-radius: $border-radius-5;
       }
-     
+      .overlingFlow {
+        height: 100px;
+        overflow: auto;
+      }
+      .dd-wrapper {
+        border: 1px solid $colorBlack;
+        border-radius: $border-radius-3;
+        padding: 2px;
+        min-width: 35%;
+        .dd-header-title {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.5em;
+          color: $TextColorLight;
+          img {
+            width: 8px;
+            margin: 0.1em;
+          }
+        }
+        .search_item {
+          width: 92%;
+          min-height: 1.75em;
+          padding: 0 1em;
+          background-color: $BackgroundPublic;
+          border-bottom: 1px solid $MainColor;
 
+        }
+        .dd-list {
+          .dd-list-item {
+            color: $MainColorLight;
+          }
+        }
+      }
       .add_card {
-        margin-left: 1em;
+        margin-left: 3em;
         background-color: $colorGray;
         padding: 0.5em;
         color: $BackgroundPublic;
@@ -46,7 +79,6 @@
       min-height: 5em;
       padding: 1em;
       box-shadow: 0 8px 8px -4px $GrayShadow;
-      .data,
       .titles {
         display: flex;
         text-align: center;
@@ -58,6 +90,22 @@
         }
         p:nth-child(3) {
           width: 25%;
+          margin-right: 1em;
+        }
+      }
+      .data {
+        .final-list {
+          display: flex;
+          text-align: center;
+          p:first-child {
+            width: 50%;
+          }
+          p:nth-child(2) {
+            width: 25%;
+          }
+          p:nth-child(3) {
+            width: 25%;
+          }
         }
       }
     }
@@ -66,6 +114,39 @@
       border: 1px solid $colorBlack;
       min-height: 5em;
       padding: 1em;
+      .total-price {
+        display: flex;
+        justify-content: right;
+        margin-right: 12%;
+      }
+      .operation {
+        display: flex;
+        justify-content: space-between;
+        margin: 1% 8%;
+        div:first-child {
+          .clear_card {
+            background-color: $DeleteColor;
+            margin-left: 1em;
+            padding: 0.5em;
+            color: $colorWhite;
+            border-radius: 3px;
+            font-size: 1em;
+            font-weight: 600;
+          }
+        }
+        div:nth-child(2) {
+          width: 50%;
+          display: flex;
+          justify-content: space-between;
+          .done_shop {
+            width: 8em;
+            background-color: $MainColor;
+            color: $colorWhite;
+            border-radius: $border-radius-3;
+            padding: 0.1em 2em;
+          }
+        }
+      }
     }
   }
 }

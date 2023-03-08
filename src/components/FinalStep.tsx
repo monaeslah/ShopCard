@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { deletAllAction } from "../redux/pages/action";
 const FinalStep = () => {
+  const dispatch = useDispatch();
+
   const happyShop = () => {
     alert();
   };
@@ -12,7 +15,7 @@ const FinalStep = () => {
       </div>
       <div className="operation">
         <div>
-          <button onClick={() => alert()} className="clear_card">
+          <button onClick={() => dispatch(deletAllAction())} className="clear_card">
             clear Cart
           </button>
         </div>
