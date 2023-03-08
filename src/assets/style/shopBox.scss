@@ -1,0 +1,71 @@
+.App {
+  font-family: "BlenderPro", "Helvetica", "Arial", sans-serif;
+  box-shadow: 0 20px 8px -4px $GrayShadow;
+  margin: 1em;
+  font-size: 1em;
+  background-color: $GrayReal;
+  padding: 1px;
+  .app-bg {
+    background-color: $BackgroundPublic;
+    padding: 2px;
+    .choosen-border {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      text-align: left;
+      min-height: 7em;
+      padding: 0 1em;
+      margin: 1em 0;
+      border: 1px solid $colorBlack;
+      box-shadow: 0 8px 8px -4px $GrayShadow;
+    
+      .product_number {
+        text-align: center;
+        width: 1em;
+        padding: 0.5em;
+        border: 1px solid $colorBlack;
+        border-radius: $border-radius-5;
+      }
+     
+
+      .add_card {
+        margin-left: 1em;
+        background-color: $colorGray;
+        padding: 0.5em;
+        color: $BackgroundPublic;
+        border-radius: 3px;
+        font-size: 1em;
+        font-weight: 600;
+        box-shadow: 0 8px 8px -4px $GrayShadow;
+      }
+    }
+    .summary-border {
+      padding: 0 1em;
+      margin: 1em 0;
+      border: 1px solid $colorBlack;
+      min-height: 5em;
+      padding: 1em;
+      box-shadow: 0 8px 8px -4px $GrayShadow;
+      .data,
+      .titles {
+        display: flex;
+        text-align: center;
+        p:first-child {
+          width: 50%;
+        }
+        p:nth-child(2) {
+          width: 25%;
+        }
+        p:nth-child(3) {
+          width: 25%;
+        }
+      }
+    }
+    .payment-border {
+      margin: 1em 0;
+      border: 1px solid $colorBlack;
+      min-height: 5em;
+      padding: 1em;
+    }
+  }
+}

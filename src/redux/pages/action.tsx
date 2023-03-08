@@ -1,0 +1,1 @@
+import { SHOWPRODUCTS } from "./type";

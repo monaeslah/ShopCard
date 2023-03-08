@@ -1,0 +1,5 @@
+export const SHOWPRODUCTS = "SHOWPRODUCTS";
+export const CHOOSEPRUDUCTS = "CHOOSEPRUDUCTS";
+export const BUYPRODUCT = "BUYPRODUCT";
+export const DELETEONE = "DELETEONE";
+export const DELETE = "DELETE";
